@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Munter - Bootstrap One Page Template</title>
+  <title>{{appname}}</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -35,7 +35,7 @@
 </head>
 
 <body data-spy="scroll" data-offset="58" data-target="#navigation">
-
+<div id="vueApp">
   <!-- Fixed navbar -->
   <div id="navigation" class="navbar navbar-fixed-top">
     <div class="container">
@@ -63,8 +63,8 @@
     <div class="container">
       <div id="home-row-1" class="row clearfix">
         <div class="col-12">
-          <h1 class="font-semibold">MUNTER <span class="font-thin">DESIGN</span></h1>
-          <h4 class="font-thin">We are an <span class="font-semibold">independent interactive agency</span> based in London.</h4>
+          <h1 class="font-semibold">{{appname}} <span class="font-thin">DESIGN</span></h1>
+          <h4 class="font-thin">We are an <span class="font-semibold">independent learning lab</span> based in {{location}}.</h4>
           <br>
           <br>
         </div>
@@ -95,7 +95,7 @@
   <div class="slide story" id="about-us" data-slide="2">
     <div class="container">
       <div class="row title-row">
-        <div class="col-12 font-thin">Contrary to popular belief, <span class="font-semibold">Lorem Ipsum</span> <br>is not simply random text.</div>
+        <div class="col-12 font-thin">Contrary to popular belief, <span class="font-semibold">{{appname}}</span> <br>is not simply an API</div>
       </div>
       <!-- /row -->
       <div class="row line-row">
@@ -109,26 +109,26 @@
       <div class="row content-row">
         <div class="col-12 col-lg-3 col-sm-6">
           <p><i class="fa fa-eye"></i></p>
-          <h2 class="font-thin">Visual <span class="font-semibold">Identity</span></h2>
-          <h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+          <h2 class="font-thin">Visualize <span class="font-semibold">Data</span></h2>
+          <h4 class="font-thin">Various visualization methods to analyze and find the meaningful data</h4>
         </div>
         <!-- /col12 -->
         <div class="col-12 col-lg-3 col-sm-6">
           <p><i class="fa fa-laptop"></i></p>
-          <h2 class="font-thin">Web <span class="font-semibold">Design</span></h2>
-          <h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+          <h2 class="font-thin">Build <span class="font-semibold">MLModels</span></h2>
+          <h4 class="font-thin">Build simple and efficient machine learning models</h4>
         </div>
         <!-- /col12 -->
         <div class="col-12 col-lg-3 col-sm-6">
           <p><i class="fa fa-tablet"></i></p>
           <h2 class="font-thin">Mobile <span class="font-semibold">Apps</span></h2>
-          <h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+          <h4 class="font-thin">Make it visible to all audience using user friendly apps</h4>
         </div>
         <!-- /col12 -->
         <div class="col-12 col-lg-3 col-sm-6">
           <p><i class="fa fa-pencil"></i></p>
           <h2 class="font-semibold">Development</h2>
-          <h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+          <h4 class="font-thin">Development pipeline is organized and provisionable</h4>
         </div>
         <!-- /col12 -->
       </div>
@@ -171,7 +171,7 @@
       <!-- /row -->
       <div class="row subtitle-row">
         <div class="col-sm-1 hidden-sm">&nbsp;</div>
-        <div class="col-12 col-sm-10 font-light">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</div>
+        <div class="col-12 col-sm-10 font-light">There are many variations of API's already available, but this is an experimentational development framework</div>
         <div class="col-sm-1 hidden-sm">&nbsp;</div>
       </div>
       <!-- /row -->
@@ -180,31 +180,31 @@
         <div class="col-12 col-sm-2">
           <p><i class="fa fa-bolt"></i></p>
           <h2 class="font-thin">Listening to<br><span class="font-semibold" >your needs</span></h2>
-          <h4 class="font-thin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h4>
+          <h4 class="font-thin">It is a long established fact that a good API is build by a healthy readers, users, analysts.</h4>
         </div>
         <!-- /col12 -->
         <div class="col-12 col-sm-2">
           <p><i class="fa fa-cog"></i></p>
           <h2 class="font-thin">Project<br><span class="font-semibold">discovery</span></h2>
-          <h4 class="font-thin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h4>
+          <h4 class="font-thin">To learn the fundamentals of APIs and further in expansion to production ready apps</h4>
         </div>
         <!-- /col12 -->
         <div class="col-12 col-sm-2">
           <p><i class="fa fa-cloud"></i></p>
           <h2 class="font-thin">Storming<br><span class="font-semibold">our brains</span></h2>
-          <h4 class="font-thin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h4>
+          <h4 class="font-thin">Emphasis on brainstorming ideas and implementing</h4>
         </div>
         <!-- /col12 -->
         <div class="col-12 col-sm-2">
           <p><i class="fa fa-map-marker"></i></p>
           <h2 class="font-thin">Getting<br><span class="font-semibold">there</span></h2>
-          <h4 class="font-thin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h4>
+          <h4 class="font-thin">Finalizing the solution and make it open for alpha beta UX</h4>
         </div>
         <!-- /col12 -->
         <div class="col-12 col-sm-2">
           <p><i class="fa fa-gift"></i></p>
           <h2 class="font-thin">Delivering<br><span class="font-semibold">the product</span></h2>
-          <h4 class="font-thin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h4>
+          <h4 class="font-thin">Releasing to production and maintinance using CI pipelines</h4>
         </div>
         <!-- /col12 -->
         <div class="col-sm-1 hidden-sm">&nbsp;</div>
@@ -219,7 +219,7 @@
   <div class="slide story" id="clients" data-slide="5">
     <div class="container">
       <div class="row title-row">
-        <div class="col-12 font-thin"><span class="font-semibold">Clients</span> we’ve worked with</div>
+        <div class="col-12 font-thin"><span class="font-semibold">Tools</span> we're using</div>
       </div>
       <!-- /row -->
       <div class="row line-row">
@@ -228,18 +228,15 @@
       <!-- /row -->
       <div class="row subtitle-row">
         <div class="col-sm-1 hidden-sm">&nbsp;</div>
-        <div class="col-12 col-sm-10 font-light">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <br/><br/> The standard chunk of Lorem Ipsum used since the 1500s is reproduced
-          below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero.</div>
+        <div class="col-12 col-sm-10 font-light">Vue.JS is the simplest web framework for web development <br/><br/> The standard chunk of Machine learning models are produced using Keras.API</div>
         <div class="col-sm-1 hidden-sm">&nbsp;</div>
       </div>
       <!-- /row -->
       <div class="row content-row">
         <div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
-        <div class="col-12 col-sm-2"><img src="img/client01.png" alt=""></div>
-        <div class="col-12 col-sm-2"><img src="img/client02.png" alt=""></div>
-        <div class="col-12 col-sm-2"><img src="img/client03.png" alt=""></div>
-        <div class="col-12 col-sm-2"><img src="img/client04.png" alt=""></div>
-        <div class="col-12 col-sm-2"><img src="img/client05.png" alt=""></div>
+        <div class="col-12 col-sm-2"><img class="img-responsive" src="img/client01.png" alt=""></div>
+        <div class="col-12 col-sm-2"></div>
+        <div class="col-12 col-sm-4"><img class="img-responsive" src="img/client02.png" alt=""></div>
         <div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
       </div>
       <!-- /row -->
@@ -269,27 +266,27 @@
         <div class="col-sm-1 hidden-sm">&nbsp;</div>
         <div class="col-12 col-sm-2 with-hover-text">
           <p><a target="_blank" href="#"><i class="fa fa-phone"></i></a></p>
-          <span class="hover-text font-light ">+44 4839-4343</span></a>
+          <span class="hover-text font-light ">{{phone}}</span></a>
         </div>
         <!-- /col12 -->
         <div class="col-12 col-sm-2 with-hover-text">
           <p><a target="_blank" href="#"><i class="fa fa-envelope"></i></a></p>
-          <span class="hover-text font-light ">munter@example.com</span></a>
+          <span class="hover-text font-light ">{{email}}</span></a>
         </div>
         <!-- /col12 -->
         <div class="col-12 col-sm-2 with-hover-text">
           <p><a target="_blank" href="#"><i class="fa fa-home"></i></a></p>
-          <span class="hover-text font-light ">London, England<br>zip code 98443</span></a>
+          <span class="hover-text font-light ">{{location}}<br></span></a>
         </div>
         <!-- /col12 -->
         <div class="col-12 col-sm-2 with-hover-text">
           <p><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></p>
-          <span class="hover-text font-light ">facebook/TemplateMag</span></a>
+          <span class="hover-text font-light ">facebook/{{fbusername}}</span></a>
         </div>
         <!-- /col12 -->
         <div class="col-12 col-sm-2 with-hover-text">
           <p><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></p>
-          <span class="hover-text font-light ">@TemplateMag</span></a>
+          <span class="hover-text font-light ">@{{twitterusername}}</span></a>
         </div>
         <!-- /col12 -->
         <div class="col-sm-1 hidden-sm">&nbsp;</div>
@@ -341,20 +338,11 @@
   <div id="copyrights">
     <div class="container">
       <p>
-        &copy; Copyrights <strong>Munter</strong>. All Rights Reserved
+        &copy; Copyrights <strong>{{appname}}</strong>. All Rights Reserved
       </p>
-      <div class="credits">
-        <!--
-          You are NOT allowed to delete the credit link to TemplateMag with free version.
-          You can delete the credit link only if you bought the pro version.
-          Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/munter-bootstrap-one-page-template/
-          Licensing information: https://templatemag.com/license/
-        -->
-        Created with Munter template by <a href="https://templatemag.com/">TemplateMag</a>
-      </div>
     </div>
   </div>
-
+</div>
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
@@ -364,6 +352,24 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+  const APP_NAME = 'MyKerasAPI';
+  document.title = APP_NAME;
+  var app = new Vue({
+    el: '#vueApp',
+    data: {
+      appname: APP_NAME,
+      location: "India",
+      phone: "+91-8111842818",
+      email: "thomasvml@gmail.com",
+      fbusername: "thottann",
+      twitterusername: "thomasvml",
+    }
+  })
+  </script>
 
 </body>
 </html>
