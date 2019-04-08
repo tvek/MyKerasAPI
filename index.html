@@ -296,7 +296,7 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
 
-          <form class="contact-form php-mail-form" role="form" onsubmit="SendMessage();return false;">
+          <form class="contact-form php-mail-form" role="form" onsubmit="SendMessage()">
 
             <div class="form-group">
               <label for="contact-name">Your Name</label>
@@ -372,6 +372,29 @@
 
   function SendMessage() {
     $.ajax({
+  type: “POST”,
+  url: “https://api.sendgrid.com/v3/mail/send”,
+  data: {
+    ‘key’: ‘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’,
+    ‘message’: {
+      ‘from_email’: ‘YOUR@EMAIL.HERE’,
+      ‘to’: [
+          {
+            ‘email’: thomasvml@gmail.com’,
+            ‘name’: ‘THOMA’,
+            ‘type’: ‘to’
+          }
+        ],
+      ‘autotext’: ‘true’,
+      ‘subject’: ‘YOUR SUBJECT HERE!’,
+      ‘html’: ‘YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!’
+    }
+  }
+ }).done(function(response) {
+   console.log(response); // if you're into that sorta thing
+ });
+    /*
+    $.ajax({
       type: "POST",
       url: 'https://api.sendgrid.com/v3/mail/send',
       dataType: 'json',
@@ -383,6 +406,8 @@
           //process the JSON data etc
       }
 })
+*/
+return false;
   }
   </script>
 
