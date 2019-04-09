@@ -20,6 +20,7 @@
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/fancybox/fancybox.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.15.0/themes/prism.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
@@ -140,8 +141,13 @@
 
   <!-- === SLide 3 - Portfolio -->
   <div class="slide story" id="portfolio" data-slide="3">
-    <div class="row">
-      <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p01-large.jpg"><img class="thumb" src="img/portfolio/p01-small.jpg" alt=""></a></div>
+    <div class="row" id="projectlist">
+      <div class="col-12 col-sm-6 col-lg-2" v-for="(project, index) in projects">
+        <a data-fancybox-group="portfolio" class="fancybox" v-bind:href="'#app'+index"><img class="thumb" v-bind:src="project.logo" alt=""></a>
+        <div style="display:none" v-bind:id="'app'+index">
+          <pre class="prettyprint"><code class="language-py">{{project.code}}</code></pre>
+        </div>
+      </div>
       <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p02-large.jpg"><img class="thumb" src="img/portfolio/p02-small.jpg" alt=""></a></div>
       <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p09-large.jpg"><img class="thumb" src="img/portfolio/p09-small.jpg" alt=""></a></div>
       <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p010-large.jpg"><img class="thumb" src="img/portfolio/p10-small.jpg" alt=""></a></div>
@@ -349,6 +355,11 @@
   <script src="lib/easing/easing.min.js"></script>
   <script src="lib/php-mail-form/validate.js"></script>
   <script src="lib/fancybox/fancybox.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+  <script src="http://www.skulpt.org/static/skulpt.min.js" type="text/javascript"></script> 
+  <script src="http://www.skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script> 
+
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
@@ -358,6 +369,12 @@
   <script>
   const APP_NAME = 'MyKerasAPI';
   document.title = APP_NAME;
+  function GetFileContents(filename){
+    file = fopen(getScriptPath(filename), 0);
+    file_length = flength(file);
+    content = fread(file, file_length);
+    return content;
+  }
   var app = new Vue({
     el: '#vueApp',
     data: {
@@ -367,10 +384,40 @@
       email: "thomasvml@gmail.com",
       fbusername: "thottann",
       twitterusername: "thomasvml",
+      projects: [
+        {
+          title: 'Hello World', 
+          code: "from keras.models import Sequential \n\
+from keras.layers import Dense, Activation \n\
+ \n\
+ # Creating Model\n\
+model = Sequential([ \n\
+    Dense(32, input_shape=(784,)),\n\
+    Activation('relu'),\n\
+    Dense(10),\n\
+    Activation('softmax'),\n\
+])\n\
+\n\
+# Compiling Model/Configuring Model\n\
+model.compile(optimizer='rmsprop',\n\
+    loss='binary_crossentropy',\n\
+    metrics=['accuracy'])\n\
+\n\
+# Data Extraction\n\
+import numpy as np\n\
+data = np.random.random((1000, 100))\n\
+labels = np.random.randint(2, size=(1000, 1))\n\
+\n\
+# Training the model\n\
+model.fit(data, labels, epochs=10, batch_size=32)\n\
+\n\
+\n\
+",
+          logo:"img/portfolio/p01-small.jpg" 
+        }
+      ]
     }
   })
-
-
   </script>
 <script type="text/javascript">
             function SendMessage() {
