@@ -49,7 +49,7 @@
         <ul class="nav navbar-nav">
           <li class="active"><a href="#intro" class="smoothscroll">Home</a></li>
           <li><a href="#about-us" class="smoothscroll">About Us</a></li>
-          <li><a href="#portfolio" class="smoothscroll">Portfolio</a></li>
+          <li><a href="#portfolio" class="smoothscroll">Projects</a></li>
           <li><a href="#process" class="smoothscroll">Process</a></li>
           <li><a href="#clients" class="smoothscroll">Tools</a></li>
           <li><a href="#contact" class="smoothscroll">Contact</a></li>
@@ -140,13 +140,12 @@
   <!-- /slide2 -->
 
   <!-- === SLide 3 - Portfolio -->
-  <div class="slide story" id="portfolio" data-slide="3">
+  <div class="slide story container-fluid" id="portfolio" data-slide="3">
     <div class="row" id="projectlist">
       <div class="col-12 col-sm-6 col-lg-2" v-for="(project, index) in projects">
-        <a data-fancybox-group="portfolio" class="fancybox" v-bind:href="'https://github.com/tvek/MyKerasAPI/tree/master/code/'+project.
+        <a data-fancybox-group="portfolio" style="max-height: 100%;max-width: 100%;" class="fancybox" v-bind:href="'https://github.com/tvek/MyKerasAPI/tree/master/code/'+project.
           title+'.ipynb'"><img class="thumb" v-bind:src="project.logo" alt=""></a>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p02-large.jpg"><img class="thumb" src="img/portfolio/p02-small.jpg" alt=""></a></div>
+      </div><!--
       <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p09-large.jpg"><img class="thumb" src="img/portfolio/p09-small.jpg" alt=""></a></div>
       <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p010-large.jpg"><img class="thumb" src="img/portfolio/p10-small.jpg" alt=""></a></div>
       <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p05-large.jpg"><img class="thumb" src="img/portfolio/p05-small.jpg" alt=""></a></div>
@@ -156,7 +155,7 @@
       <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p03-large.jpg"><img class="thumb" src="img/portfolio/p03-small.jpg" alt=""></a></div>
       <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p04-large.jpg"><img class="thumb" src="img/portfolio/p04-small.jpg" alt=""></a></div>
       <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p11-large.jpg"><img class="thumb" src="img/portfolio/p11-small.jpg" alt=""></a></div>
-      <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p12-large.jpg"><img class="thumb" src="img/portfolio/p12-small.jpg" alt=""></a></div>
+      <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p12-large.jpg"><img class="thumb" src="img/portfolio/p12-small.jpg" alt=""></a></div>-->
     </div>
     <!-- /row -->
   </div>
@@ -385,33 +384,11 @@
       projects: [
         {
           title: 'Hello World', 
-          code: "from keras.models import Sequential \n\
-from keras.layers import Dense, Activation \n\
- \n\
- # Creating Model\n\
-model = Sequential([ \n\
-    Dense(32, input_shape=(784,)),\n\
-    Activation('relu'),\n\
-    Dense(10),\n\
-    Activation('softmax'),\n\
-])\n\
-\n\
-# Compiling Model/Configuring Model\n\
-model.compile(optimizer='rmsprop',\n\
-    loss='binary_crossentropy',\n\
-    metrics=['accuracy'])\n\
-\n\
-# Data Extraction\n\
-import numpy as np\n\
-data = np.random.random((1000, 100))\n\
-labels = np.random.randint(2, size=(1000, 1))\n\
-\n\
-# Training the model\n\
-model.fit(data, labels, epochs=10, batch_size=32)\n\
-\n\
-\n\
-",
           logo:"img/portfolio/p01-small.jpg" 
+        },
+        {
+          title: 'MLP for multi-class softmax classification', 
+          logo:"img/portfolio/p02-small.jpg" 
         }
       ]
     }
