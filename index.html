@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{appname}}</title>
+  <title>MyKerasAPI - TVEK</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -51,7 +51,7 @@
           <li><a href="#about-us" class="smoothscroll">About Us</a></li>
           <li><a href="#portfolio" class="smoothscroll">Portfolio</a></li>
           <li><a href="#process" class="smoothscroll">Process</a></li>
-          <li><a href="#clients" class="smoothscroll">Clients</a></li>
+          <li><a href="#clients" class="smoothscroll">Tools</a></li>
           <li><a href="#contact" class="smoothscroll">Contact</a></li>
         </ul>
       </div>
@@ -143,10 +143,8 @@
   <div class="slide story" id="portfolio" data-slide="3">
     <div class="row" id="projectlist">
       <div class="col-12 col-sm-6 col-lg-2" v-for="(project, index) in projects">
-        <a data-fancybox-group="portfolio" class="fancybox" v-bind:href="'#app'+index"><img class="thumb" v-bind:src="project.logo" alt=""></a>
-        <div style="display:none" v-bind:id="'app'+index">
-          <pre class="prettyprint"><code class="language-py">{{project.code}}</code></pre>
-        </div>
+        <a data-fancybox-group="portfolio" class="fancybox" v-bind:href="'https://github.com/tvek/MyKerasAPI/tree/master/code/'+project.
+          title+'.ipynb'"><img class="thumb" v-bind:src="project.logo" alt=""></a>
       </div>
       <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p02-large.jpg"><img class="thumb" src="img/portfolio/p02-small.jpg" alt=""></a></div>
       <div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="img/portfolio/p09-large.jpg"><img class="thumb" src="img/portfolio/p09-small.jpg" alt=""></a></div>
